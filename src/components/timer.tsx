@@ -4,22 +4,20 @@ export default function Timer(){
     const electionDate = new Date("10-06-2024")
     const [now, setNow] = useState(new Date())
     const diff = electionDate.getTime() - now.getTime()
-    
+
     const msInDay = 24 * 60 * 60 * 1000;
     const msInHour = 60 * 60 * 1000;
     const msInMinute = 60 * 1000;
     const msInSecond = 1000;
-    
-    const days = Math.floor(diff / msInDay).toString().padStart(2, '0');
-    const hours = Math.floor((diff % msInDay) / msInHour).toString().padStart(2, '0');
-    const minutes = Math.floor((diff % msInHour) / msInMinute).toString().padStart(2, '0');
-    const seconds = Math.floor((diff % msInMinute) / msInSecond).toString().padStart(2, '0');
 
+    const days = Math.floor(diff / msInDay);
+    const hours = Math.floor((diff % msInDay) / msInHour)
+    const minutes = Math.floor((diff % msInHour) / msInMinute)
+    const seconds = Math.floor((diff % msInMinute) / msInSecond)
     function updateTime(){
         setNow(new Date())
     }
     setInterval(updateTime, 500);
-
     return (
         <div>
             <ol className="uppercase flex flex-wrap justify-center text-white text-xl">
