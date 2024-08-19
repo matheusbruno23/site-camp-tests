@@ -1,0 +1,107 @@
+---
+import Timeline from '../components/trajetória.tsx';
+import Layout from '../layouts/Layout.astro';
+import FaleComigo from '../components/falecomigo.tsx';
+---
+<Layout title="Trajetória">
+    <FaleComigo />
+    <header title="Trajetória" class="bg-backgroundtrajetoria bg-cover h-screen flex flex-col justify-between static">
+        <nav class="pt-16">
+            <ul class="flex md:w-1/2 m-auto justify-between bg-green py-4 text-sm px-16 md:rounded-full items-center text-dark-blue ">
+                <li class="md:block hidden">
+                    <a href="/">
+                        <img src="/trajetoria/logo-azul.svg" alt="logo" width={100} height={100}/>
+                    </a>
+                </li>
+                <li>
+                    <a href="/">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a href="/trajetoria" class="border-b-2 p-1 border-dark-blue">
+                        Trajetória
+                    </a>
+                </li>
+                <li>
+                    <a href="/#pautas">
+                        Pautas
+                    </a>
+                </li>
+                <li class="border rounded-full border-dark-blue px-2 py-1 ">
+                    <a href="https://wa.me/5521984384321?text=Oi,%20Lel%C3%AA!%20Quero%20receber%20seu%20conte%C3%BAdo">
+                        Fale Comigo
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="flex flex-col pb-64 px-4 md:pl-48 ">
+            <div class="md:py-8 ">
+                <h1 class="text-white md:h-16 text-4xl md:text-7xl font-geo-thin">História de</h1>
+                <h2 class="text-white font-geo-bold text-4xl md:text-7xl py-4">Leticia Arsenio.</h2>
+            </div>
+            <p class="text-2xl text-white font-geo-thin ">
+            Letícia nasceu em 18 de dezembro 1994, em São <br>Gonçalo. É carioca da gema e já morou nas três <br>zonas da cidade: Zona Sul, Zona Norte e Zona Oeste.<br> Fez grande parte de sua formação escolar no Colé-<br>gio Cruzeiro e no PH.
+            </p>
+        <div/>
+    </header>
+    <main>
+        <Timeline />
+    </main>
+    <footer class="md:px-32 px-16 font-thin bg-dark-blue text-light-green">
+        <div class="flex justify-between md:flex-row flex-col md:py-16">
+            <ul class="flex md:w-1/3 justify-between text-light-green py-16 md:py-0">
+                <li><a href="/">Início </a></li>
+                <li><a href="/trajetoria"> Trajetória </a></li>
+                <li><a href="/#pautas"> Pautas </a></li>
+            </ul>
+            <p class="text-3xl">Dá pra <span class="font-bold">fazer</span></p>
+        </div>
+        <hr class="h-1 bg-gray-300"/>
+        <div class="flex justify-between py-8">
+            <p>1998-2024 | Feito com orgulho pelo time
+                <span class="font-bold">
+                    Letícia Arsenio
+                </span>
+                para todos os cariocas
+            </p>
+            <ul class="flex w-1/3 justify-end space-x-4">
+                <li>
+                    <a href="https://www.youtube.com/c/Let%C3%ADciaArsenio">
+                        <img src="/icons/YoutubeGreen.svg" class="fill-white" alt="Youtube" width="24" height="20">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/leticiaarsenio">
+                        <img src="/icons/TwitterGreen.svg" alt="X" width="20" height="20"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/leticiaarsenio/">
+                        <img src="/icons/InstagramGreen.svg" alt="Instagram" width="20"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@leticiaarsenio">
+                        <img src="/icons/TikTokGreen.svg" alt="TikTok" width="18"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://api.whatsapp.com/send/?phone=5521984384321&text&type=phone_number&app_absent=0">
+                        <img src="/icons/WhatsAppGreen.svg" alt="WhatsApp" width="20"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/leticiarsenio">
+                        <img src="/icons/FacebookGreen.svg" alt="Facebook" width="11"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/leticiaarsenio/">
+                        <img src="/icons/LinkedinGreen.svg" alt="Linkedin" width="20"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</Layout>

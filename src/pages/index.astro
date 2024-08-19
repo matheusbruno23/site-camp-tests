@@ -1,0 +1,106 @@
+---
+import Pautas from '../components/pautas.tsx'
+import Layout from '../layouts/Layout.astro';
+import Timer from '../components/timer.tsx';
+import FaleComigo from '../components/falecomigo.tsx';
+---
+
+<Layout title="Letícia Arsenio">
+    <FaleComigo />
+    <header class="bg-banner bg-contain bg-no-repeat md:bg-cover md:bg-bottom md:min-h-screen flex flex-col justify-between ">
+        <nav class="md:py-8 ">
+            <ul class="flex md:w-1/2 m-auto justify-between bg-blue py-4 text-sm px-16 md:rounded-full items-center text-white font-geo-bold">
+                <li class="hidden lg:block">
+                    <a href="/">
+                        <img src="/logo.svg" alt="Inicio" width="100" height="100" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/" class="border-b p-1 border-white">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a href="/trajetoria">
+                        Trajetória
+                    </a>
+                </li>
+                <li>
+                    <a href="/#pautas">
+                        Pautas
+                    </a>
+                </li>
+                <li class="border rounded-full border-green px-2 py-1 ">
+                    <a href="https://wa.me/5521984384321?text=Oi,%20Lel%C3%AA!%20Quero%20receber%20seu%20conte%C3%BAdo">
+                        Fale Comigo
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <img alt="" src="/banner-sm_50.webp" height="448" width="800" class="md:hidden" />
+        <h1 class="bg-green text-dark-blue text-6xl pt-6 pb-1 font-bold gap-4 flex justify-center items-center font-uni-heavy">
+            LETÍCIA ARSENIO
+            <p class="text-xs font-hum-thin" >Pré-candidata a vereadora </br> do Rio de Janeiro</p>
+        </h1>
+    </header>
+    <main>
+        <div class="bg-rio ">
+            <Pautas client:only />
+            <section class="min-h-screen flex flex-col text-center justify-center">
+                <h2 class="uppercase text-white text-4xl pb-16 font-geo-thin">Contagem Regressiva <br/> até as eleições</h2>
+                <Timer client:only/>
+            </section>
+        </div>
+        <section class="min-h-screen bg-dark-blue flex flex-col justify-evenly items-center">
+            <h2 class="uppercase font-uni-heavy text-4xl md:text-8xl text-center text-white px-8 py-16 md:border-2 border-green">O que o povo diz?</h2>
+            <div class="flex gap-4 flex-col md:flex-row overflow-x-scroll m-4">
+                <img src="/feedback/01-min.webp" alt="" width="400" loading="lazy" height="400"/>
+                <img src="/feedback/02-min.webp" alt="" width="400" loading="lazy" height="400"/>
+                <img src="/feedback/03-min.webp" alt="" width="400" loading="lazy" height="400"/>
+            </div>
+        </section>
+    </main>
+    <hr class="h-4 bg-green"/>
+    <footer class="md:px-32 px-8 font-thin bg-gray-100 text-gray-700">
+        <div class="flex flex-col md:flex-row justify-between py-16 ">
+            <ul class="flex w-full md:w-1/3 gap-4 stify-between">
+                <li><a href="/">Início </a></li>
+                <li><a href="/trajetoria"> Trajetória </a></li>
+                <li><a href="#pautas"> Pautas </a></li>
+            </ul>
+            <p class="text-3xl">Dá pra <span class="font-bold">fazer</span></p>
+        </div>
+        <hr class="h-1 bg-gray-300"/>
+        <div class="flex flex-col md:flex-row justify-between py-8">
+            <p>1998-2024 | Feito com orgulho pelo time
+                <span class="font-bold">
+                    Letícia Arsenio
+                </span>
+                para todos os cariocas
+            </p>
+            <ul class="flex md:w-1/3 justify-between pt-4  md:justify-end space-x-4">
+                <li>
+                    <a href="https://www.youtube.com/c/Let%C3%ADciaArsenio"> <img src="/icons/Youtube.svg" alt="Youtube" width="24" height="20"> </a>
+                </li>
+                <li>
+                    <a href="https://x.com/leticiaarsenio"> <img src="/icons/Twitter.svg" alt="X" width="20" height="20"/> </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/leticiaarsenio/"> <img src="/icons/Instagram.svg" alt="Instagram" width="20" height="20"/> </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@leticiaarsenio"> <img src="/icons/TikTok.svg" alt="TikTok" width="18" height="16"/> </a>
+                </li>
+                <li>
+                    <a href="https://api.whatsapp.com/send/?phone=5521984384321&text&type=phone_number&app_absent=0"> <img src="/icons/WhatsApp.svg" alt="WhatsApp" width="20" height="20"/> </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/leticiarsenio"> <img src="/icons/Facebook.svg" alt="Facebook" width="11" height="11"/> </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/leticiaarsenio/"> <img src="/icons/Linkedin.svg" alt="Linkedin" width="20" height="20"/> </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</Layout>

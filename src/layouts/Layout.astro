@@ -1,0 +1,97 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-br">
+	<head>
+        <meta name="title" content="Letícia Arsenio - Pré-candidata a vereadora" />
+        <meta name="description" content="Pré-candidata a vereadora da Cidade do Rio de Janeiro, Leticia Arsenio. Tenho 29 anos" />
+        <meta name="keywords" content="candidata, vereadora, vereador, rio de janeiro, municipio, cidade do rio, leticia arsenio">
+		<meta charset="UTF-8" />
+		<meta name="description" content="Letícia Arsenio" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+    <style>
+    @tailwind base; 
+    @tailwind components;
+    @tailwind utilities;
+    
+    @layer base {
+      @font-face {
+        font-family: 'Geo-regular';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/font/GeoRegular.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Geo-thin';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(/font/GeoThin.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Geo-bold';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(/font/GeoBold.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Geo-hair';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/font/GeoHair.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Hum-thin';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/font/HumThin.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Uni-heavy';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/font/uniHeavy.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Uni-italic';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/font/UniItalic.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Uni-thin';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/font/UniThin.woff2) format('woff2');
+      }
+      @font-face {
+        font-family: 'Uni-thin-italic';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/font/UniThinItalic.woff2) format('woff2');
+      }
+    }
+    </style>
+</html>
